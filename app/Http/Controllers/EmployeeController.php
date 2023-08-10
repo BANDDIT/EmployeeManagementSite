@@ -66,7 +66,7 @@ class EmployeeController extends Controller
 
     public function Search(Request $request){
         $employees = Employee::where('nama','regexp','^'.$request->searchName)->get();
-        $id=0;
+        $id=1;
         return view('home',compact('employees','id'));
     }
 }
